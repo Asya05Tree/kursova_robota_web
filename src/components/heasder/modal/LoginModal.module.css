@@ -1,0 +1,354 @@
+:root {
+    /* Light Theme Colors */
+    --pastel-light-bg: rgba(254, 246, 240, 0.95);
+    --pastel-light-accent: #e3c6b8;
+    --neon-light-color: #2f2f2f;
+    --neon-light-glow: rgba(224, 183, 146, 0.8);
+    --input-light-border: #d7a7a0;
+    --input-light-focus: #eab28b;
+    --button-light-bg: #e3b295;
+    --button-light-hover: #ffccbb;
+
+    /* Dark Theme Colors */
+    --pastel-dark-bg: rgba(49, 59, 65, 0.95);
+    --pastel-dark-accent: #77c3f2;
+    --neon-dark-color: #f2f2f2;
+    --neon-dark-glow: rgba(77, 181, 255, 0.8);
+    --input-dark-border: #4db5ff;
+    --input-dark-focus: #80d4ff;
+    --button-dark-bg: #3399cc;
+    --button-dark-hover: #66c2ff;
+
+    --neon-animation-duration: 1.5s;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes neonPulseLight {
+    0% {
+        box-shadow: 0 0 7px var(--neon-light-glow),
+            0 0 10px var(--neon-light-glow),
+            0 0 21px var(--neon-light-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 12px var(--neon-light-glow),
+            0 0 20px var(--neon-light-glow),
+            0 0 31px var(--neon-light-glow);
+    }
+
+    100% {
+        box-shadow: 0 0 7px var(--neon-light-glow),
+            0 0 10px var(--neon-light-glow),
+            0 0 21px var(--neon-light-glow);
+    }
+}
+@keyframes neonPulseDark {
+    0% {
+        box-shadow: 0 0 7px var(--neon-dark-glow),
+            0 0 10px var(--neon-dark-glow),
+            0 0 21px var(--neon-dark-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 12px var(--neon-dark-glow),
+            0 0 20px var(--neon-dark-glow),
+            0 0 31px var(--neon-dark-glow);
+    }
+
+    100% {
+        box-shadow: 0 0 7px var(--neon-dark-glow),
+            0 0 10px var(--neon-dark-glow),
+            0 0 21px var(--neon-dark-glow);
+    }
+}
+@keyframes buttonGlowLight {
+    0% {
+        box-shadow: 0 0 5px var(--button-light-bg);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--button-light-bg);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--button-light-bg);
+    }
+}
+@keyframes buttonGlowDark {
+    0% {
+        box-shadow: 0 0 5px var(--button-dark-bg);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--button-dark-bg);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--button-dark-bg);
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: modalAppear 0.3s ease-out;
+}
+
+.modalContent {
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.modalContent:hover {
+    transform: translateY(-2px);
+}
+
+.modalContent.light-theme {
+    background-color: var(--pastel-light-bg);
+    animation: neonPulseLight 3s infinite;
+}
+
+.modalContent.dark-theme {
+    background-color: var(--pastel-dark-bg);
+    color: var(--neon-dark-color);
+    animation: neonPulseDark 3s infinite;
+}
+
+.modalTabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.tabButton {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tabButton.light-theme {
+    color: var(--neon-light-color);
+}
+
+.tabButton.dark-theme {
+    color: var(--neon-dark-color);
+}
+
+.tabButton:hover {
+    transform: translateY(-2px);
+}
+
+.activeTab {
+    font-weight: bold;
+}
+
+.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.activeTab.light-theme::after {
+    background-color: var(--pastel-light-accent);
+    animation: buttonGlowLight 2s infinite;
+}
+
+.activeTab.dark-theme::after {
+    background-color: var(--pastel-dark-accent);
+    animation: buttonGlowDark 2s infinite;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input.light-theme {
+    border: 2px solid var(--input-light-border);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.input.dark-theme {
+    border-color: var(--input-dark-border);
+    background-color: rgba(16, 22, 30, 0.8);
+    color: var(--neon-dark-color);
+}
+
+.input:focus {
+    outline: none;
+    transform: translateY(-1px);
+}
+.input.light-theme:focus {
+    border-color: var(--input-light-focus);
+    box-shadow: 0 0 10px var(--input-light-focus);
+}
+.input.dark-theme:focus {
+    border-color: var(--input-dark-focus);
+    box-shadow: 0 0 10px var(--input-dark-focus);
+}
+
+.submitButton {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submitButton::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+}
+
+.submitButton:hover::after {
+    left: 100%;
+}
+.submitButton.light-theme {
+    background-color: var(--button-light-bg);
+}
+
+.submitButton.light-theme:hover {
+    background-color: var(--button-light-hover);
+    animation: buttonGlowLight 2s infinite;
+}
+.submitButton.dark-theme {
+    background-color: var(--button-dark-bg);
+}
+
+.submitButton.dark-theme:hover {
+    background-color: var(--button-dark-hover);
+    animation: buttonGlowDark 2s infinite;
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+    transform: rotate(90deg);
+}
+.closeButton.light-theme {
+    color: var(--neon-light-color);
+}
+.closeButton.dark-theme {
+    color: var(--neon-dark-color);
+}
+
+.privacyText {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.privacyText:hover {
+    opacity: 1;
+}
+
+.privacyLink {
+    margin-left: 0.3rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.privacyLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: width 0.3s ease;
+}
+
+.privacyLink:hover::after {
+    width: 100%;
+}
+
+.privacyLink.light-theme {
+    color: var(--button-light-bg);
+}
+
+.privacyLink.light-theme::after {
+    background-color: var(--button-light-bg);
+}
+.privacyLink.dark-theme {
+    color: var(--button-dark-bg);
+}
+
+.privacyLink.dark-theme::after {
+    background-color: var(--button-dark-bg);
+}
+
+.errorMessage {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    animation: modalAppear 0.3s ease-out;
+}

@@ -1,0 +1,130 @@
+/*Header.module.css*/
+:root {
+    --header-bg-light: #f8d4b5;
+    --header-bg-dark: #4a4a4a;
+    --header-text-light: #323232;
+    --header-text-dark: #f0f0f0;
+}
+
+.light-theme {
+    --header-bg: var(--header-bg-light);
+    --header-text: var(--header-text-light);
+}
+
+.dark-theme {
+    --header-bg: var(--header-bg-dark);
+    --header-text: var(--header-text-dark);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+.logo img {
+    height: 50px;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: var(--header-text);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.favorites-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.favorites-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.favorites-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.favorites-icon:hover {
+    transform: scale(1.1);
+}
+
+.favorites-filled {
+    color: red;
+}

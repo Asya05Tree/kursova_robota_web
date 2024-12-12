@@ -1,0 +1,205 @@
+/* ProductDetail.module.css */
+:root {
+    --detail-bg-light: #ffe8d7;
+    --detail-bg-dark: #2c2c2c;
+    --detail-text-light: #333;
+    --detail-text-dark: #e0e0e0;
+    --detail-accent-light: #e7a86d;
+    --detail-accent-dark: #b97a57;
+    --detail-border-light: #eed3c0;
+    --detail-border-dark: #454545;
+    --detail-comment-bg-light: #ffffff;
+    --detail-comment-bg-dark: #3a3a3a;
+}
+
+.product-detail {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.light {
+    background-color: var(--detail-bg-light);
+    color: var(--detail-text-light);
+    border: 1px solid var(--detail-border-light);
+}
+
+.dark {
+    background-color: var(--detail-bg-dark);
+    color: var(--detail-text-dark);
+    border: 1px solid var(--detail-border-dark);
+}
+
+.back-button {
+    position: fixed; 
+    top: 50%; 
+    right: 5vw; 
+    transform: translateY(50%);
+}
+
+.back-button-link {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.light .back-button-link {
+    background-color: var(--detail-accent-light);
+    color: white;
+}
+
+.dark .back-button-link {
+    background-color: var(--detail-accent-dark);
+    color: white;
+}
+
+.back-button-link:hover {
+    opacity: 0.9;
+    transform: translateX(-5px);
+}
+
+.comment-form {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    width: 80%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+.light .input {
+    background-color: white;
+    border-color: var(--detail-border-light);
+    color: var(--detail-text-light);
+}
+
+.dark .input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--detail-border-dark);
+    color: var(--detail-text-dark);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--detail-accent-light);
+    box-shadow: 0 0 0 3px rgba(231, 168, 109, 0.2);
+}
+
+.button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.light .button {
+    background-color: var(--detail-accent-light);
+    color: white;
+}
+
+.dark .button {
+    background-color: var(--detail-accent-dark);
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.comments-section {
+    margin-top: 2rem;
+}
+
+.comments-container {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+.comment {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.light .comment {
+    background-color: var(--detail-comment-bg-light);
+    border: 1px solid var(--detail-border-light);
+}
+
+.dark .comment {
+    background-color: var(--detail-comment-bg-dark);
+    border: 1px solid var(--detail-border-dark);
+}
+
+/* Animation Classes for Comments */
+.comment-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.comment-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms ease-in-out;
+}
+
+.comment-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comment-exit-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 300ms ease-in-out;
+}
+
+/* Scrollbar Styling */
+.comments-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.light .comments-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.dark .comments-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.comments-container::-webkit-scrollbar-track {
+    background: transparent;
+}

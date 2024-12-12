@@ -1,0 +1,154 @@
+/* BrandProductPage.module.css */
+:root {
+    --brand-bg-light: #ffe8d7;
+    --brand-bg-dark: #383838;
+    --brand-text-light: #383838;
+    --brand-text-dark: #f0f0f0;
+    --brand-checkbox-border: #dfb494;
+    --brand-checkbox-active-bg: #eac1a1;
+    --brand-checkbox-inactive-bg: #ffe3ce;
+}
+
+.brand-product-container {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.light-theme {
+    background-color: var(--brand-bg-light);
+    color: var(--brand-text-light);
+}
+
+.dark-theme {
+    background-color: var(--brand-bg-dark);
+    color: var(--brand-text-dark);
+}
+
+.brands-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.brand-checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.brand-checkbox input {
+    display: none;
+}
+
+.light-theme .brand-checkbox {
+    background-color: var(--brand-checkbox-inactive-bg);
+    color: var(--brand-text-light);
+    border: 1px solid var(--brand-checkbox-border);
+}
+
+.light-theme .brand-checkbox.active {
+    background-color: var(--brand-checkbox-active-bg);
+    color: var(--brand-text-light);
+    font-weight: 600;
+}
+
+.dark-theme .brand-checkbox {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--brand-text-dark);
+}
+
+.brand-checkbox.active {
+    font-weight: bold;
+}
+
+.dark-theme .brand-checkbox.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product-item {
+    width: 250px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.light-theme .product-item {
+    background-color: white;
+}
+
+.dark-theme .product-item {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.product-content h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 0.5rem;
+    font-size: 0.8em;
+}
+
+.discounted-price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.light-buy-button {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: white;
+}
+
+.dark-buy-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.buy-button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,133 @@
+:root {
+    --fav-bg-light: #f9f5f2;
+    --fav-bg-dark: #1f1f1f;
+    --fav-text-light: #333;
+    --fav-text-dark: #e0e0e0;
+    --fav-item-light: #fff4e6;
+    --fav-item-dark: #2c2c2c;
+    --fav-neon-light: #ffebcd;
+    --fav-neon-dark: #00efefe5;
+}
+
+.favorites-container {
+    padding: 2rem;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.favorites-container.light-theme {
+    background-color: var(--fav-bg-light);
+    color: var(--fav-text-light);
+}
+
+.favorites-container.dark-theme {
+    background-color: var(--fav-bg-dark);
+    color: var(--fav-text-dark);
+}
+
+.empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.favorite-item {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.light-item {
+    background: linear-gradient(135deg, var(--fav-item-light), #fff6e6);
+    border: 1px solid var(--fav-neon-light);
+}
+
+.dark-item {
+    background: linear-gradient(135deg, var(--fav-item-dark), #3c3c3c);
+    border: 1px solid var(--fav-neon-dark);
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.product-pricing {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.discounted-price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.product-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.add-to-cart-btn, 
+.remove-favorite-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.light-btn {
+    background: linear-gradient(135deg, #ffcc80, #ff9800);
+    color: white;
+}
+
+.dark-btn {
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    color: white;
+}
+
+.light-btn-secondary,
+.dark-btn-secondary {
+    background: transparent;
+    border: 2px solid currentColor;
+    color: #333;
+}
+
+.dark-btn-secondary {
+    color: #e0e0e0;
+}
+
+.add-to-cart-btn:hover,
+.remove-favorite-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

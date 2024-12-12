@@ -1,0 +1,94 @@
+/* ToggleSwitch.module.css */
+:root {
+    --pastel-light-bg: #ffeee6;
+    --pastel-dark-bg: #e6f0ff;
+    --pastel-light-accent: #d7a7a0;
+    --pastel-dark-accent: #bae1ff;
+    --neon-light-color1: #f9c2ba;
+    --neon-dark-color1: #4db5ff;
+}
+
+.toggleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.25rem;
+}
+
+.toggleLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.themeSwitch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    transition: all 0.3s ease;
+}
+
+.input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--pastel-light-bg);
+    transition: 0.4s;
+    border-radius: 16px;
+    border: 2px solid var(--neon-light-color1);
+    box-shadow: 0 0 3px var(--neon-light-color1);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3.5px;
+    bottom: 3.5px;
+    background-color: var(--pastel-light-accent);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.input:checked + .slider {
+    background-color: var(--pastel-dark-bg);
+    border-color: var(--neon-dark-color1);
+    box-shadow: 0 0 10px var(--neon-dark-color1);
+}
+
+.input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: var(--pastel-dark-accent);
+}
+
+.input:checked + .slider,
+.input:not(:checked) + .slider {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Hover and Focus Effects */
+.themeSwitch:hover .slider,
+.input:focus + .slider {
+    box-shadow: 0 0 15px var(--neon-light-color1);
+}
+
+.input:checked:hover + .slider,
+.input:checked:focus + .slider {
+    box-shadow: 0 0 15px var(--neon-dark-color1);
+}
+
+.slider,
+.slider:before {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

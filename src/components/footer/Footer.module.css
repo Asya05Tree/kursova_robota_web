@@ -1,0 +1,28 @@
+/* Footer.module.css */
+.footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.light-theme {
+    background-color: var(--header-bg-light, #f8d4b5);
+    color: var(--header-text-light, #323232);
+}
+
+.dark-theme {
+    background-color: var(--header-bg-dark, #4a4a4a);
+    color: var(--header-text-dark, #f0f0f0);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.music-player {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

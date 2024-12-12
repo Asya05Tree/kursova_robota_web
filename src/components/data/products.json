@@ -1,0 +1,304 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": {
+        "uk": "Royal Преміум для котів",
+        "en": "Royal Premium for cats"
+      },
+      "price": 901,
+      "originalPrice": 1099,
+      "discount": 18,
+      "brand": "CatBrand",
+      "category": "food",
+      "animalType": "cat",
+      "ageGroup": "adult",
+      "description": {
+        "uk": "Преміальний сухий корм для дорослих котів",
+        "en": "Premium dry food for adult cats"
+      },
+      "stockQuantity": 50,
+      "arrivalDate": "2024-12-13"
+    },
+    {
+      "id": 2,
+      "name": {
+        "uk": "М'яч для собак-підлітків",
+        "en": "Ball for teen dogs"
+      },
+      "price": 199,
+      "originalPrice": 199,
+      "discount": 0,
+      "brand": "teenBrand",
+      "category": "toys",
+      "animalType": "dog",
+      "ageGroup": "teen",
+      "description": {
+        "uk": "М'який гумовий м'яч для гри з собаками",
+        "en": "Soft rubber ball for playing with dogs"
+      },
+      "stockQuantity": 100,
+      "arrivalDate": "2024-12-13"
+    },
+    {
+      "id": 3,
+      "name": {
+        "uk": "Шампунь для котів",
+        "en": "Cat Shampoo"
+      },
+      "price": 439,
+      "originalPrice": 399,
+      "discount": 10,
+      "brand": "CatBrand",
+      "category": "hygiene",
+      "animalType": "cat",
+      "ageGroup": "young",
+      "description": {
+        "uk": "Делікатний шампунь для молодих котів",
+        "en": "Gentle shampoo for young cats"
+      },
+      "stockQuantity": 30,
+      "arrivalDate": "2024-03-23"
+    },
+    {
+      "id": 4,
+      "name": {
+        "uk": "Корм для цуценят",
+        "en": "Puppy Food"
+      },
+      "price": 450,
+      "originalPrice": 500,
+      "discount": 10,
+      "brand": "DogBrand",
+      "category": "food",
+      "animalType": "dog",
+      "ageGroup": "young",
+      "description": {
+        "uk": "Повноцінний раціон для цуценят",
+        "en": "Complete diet for puppies"
+      },
+      "stockQuantity": 60,
+      "arrivalDate": "2024-03-25"
+    },
+    {
+      "id": 5,
+      "name": {
+        "uk": "Будиночок для котів",
+        "en": "Cat House"
+      },
+      "price": 720,
+      "originalPrice": 800,
+      "discount": 10,
+      "brand": "MyHouseIsCatDogBrand",
+      "category": "sleeping",
+      "animalType": "cat",
+      "ageGroup": "any",
+      "description": {
+        "uk": "Затишний будиночок для котів",
+        "en": "Cozy house for cats"
+      },
+      "stockQuantity": 20,
+      "arrivalDate": "2024-03-26"
+    },
+    {
+      "id": 6,
+      "name": {
+        "uk": "Намордник для собак",
+        "en": "Dog Muzzle"
+      },
+      "price": 540,
+      "originalPrice": 600,
+      "discount": 10,
+      "brand": "Log(Dog)Brand",
+      "category": "accessories",
+      "animalType": "dog",
+      "ageGroup": "adult",
+      "description": {
+        "uk": "Зручний намордник для дорослих собак",
+        "en": "Comfortable muzzle for adult dogs"
+      },
+      "stockQuantity": 45,
+      "arrivalDate": "2024-03-27"
+    },
+    {
+      "id": 7,
+      "name": {
+        "uk": "Туалет для котів",
+        "en": "Cat Litter Box"
+      },
+      "price": 630,
+      "originalPrice": 700,
+      "discount": 10,
+      "brand": "MyHouseIsCatDogBrand",
+      "category": "hygiene",
+      "animalType": "cat",
+      "ageGroup": "any",
+      "description": {
+        "uk": "Закритий туалет для котів",
+        "en": "Enclosed cat litter box"
+      },
+      "stockQuantity": 35,
+      "arrivalDate": "2024-12-13"
+    },
+    {
+      "id": 8,
+      "name": {
+        "uk": "Повідок для собак-підлітків",
+        "en": "Teen Dog Leash"
+      },
+      "price": 270,
+      "originalPrice": 300,
+      "discount": 10,
+      "brand": "teenBrand",
+      "category": "accessories",
+      "animalType": "dog",
+      "ageGroup": "teen",
+      "description": {
+        "uk": "Міцний повідок для прогулянок",
+        "en": "Durable leash for walks"
+      },
+      "stockQuantity": 80,
+      "arrivalDate": "2024-03-29"
+    },
+    {
+      "id": 9,
+      "name": {
+        "uk": "Миска для котів",
+        "en": "Cat Bowl"
+      },
+      "price": 180,
+      "originalPrice": 200,
+      "discount": 10,
+      "brand": "CatBrand",
+      "category": "accessories",
+      "animalType": "cat",
+      "ageGroup": "any",
+      "description": {
+        "uk": "Ергономічна миска для корму",
+        "en": "Ergonomic food bowl"
+      },
+      "stockQuantity": 100,
+      "arrivalDate": "2024-03-30"
+    },
+    {
+      "id": 10,
+      "name": {
+        "uk": "Іграшка для цуценят",
+        "en": "Puppy Toy"
+      },
+      "price": 315,
+      "originalPrice": 350,
+      "discount": 10,
+      "brand": "DogBrand",
+      "category": "toys",
+      "animalType": "dog",
+      "ageGroup": "young",
+      "description": {
+        "uk": "Розвиваюча іграшка для цуценят",
+        "en": "Educational toy for puppies"
+      },
+      "stockQuantity": 50,
+      "arrivalDate": "2024-03-31"
+    },
+    {
+      "id": 11,
+      "name": {
+        "uk": "Корм для дорослих котів",
+        "en": "Adult Cat Food"
+      },
+      "price": 270,
+      "originalPrice": 300,
+      "discount": 10,
+      "brand": "CatBrand",
+      "category": "food",
+      "animalType": "cat",
+      "ageGroup": "adult",
+      "description": {
+        "uk": "Збалансований корм для дорослих котів",
+        "en": "Balanced food for adult cats"
+      },
+      "stockQuantity": 200,
+      "arrivalDate": "2024-12-12"
+    },
+    {
+      "id": 12,
+      "name": {
+        "uk": "Гребінець для котів",
+        "en": "Cat Brush"
+      },
+      "price": 225,
+      "originalPrice": 250,
+      "discount": 10,
+      "brand": "MyHouseIsCatDogBrand",
+      "category": "hygiene",
+      "animalType": "cat",
+      "ageGroup": "any",
+      "description": {
+        "uk": "М'який гребінець для догляду за шерстю",
+        "en": "Soft brush for fur care"
+      },
+      "stockQuantity": 40,
+      "arrivalDate": "2024-12-12"
+    },
+    {
+      "id": 13,
+      "name": {
+        "uk": "Ліжко для собак-підлітків",
+        "en": "Teen Dog Bed"
+      },
+      "price": 850,
+      "originalPrice": 850,
+      "discount": 0,
+      "brand": "teenBrand",
+      "category": "sleeping",
+      "animalType": "dog",
+      "ageGroup": "teen",
+      "description": {
+        "uk": "Зручне ліжко для собак-підлітків",
+        "en": "Comfortable bed for teen dogs"
+      },
+      "stockQuantity": 25,
+      "arrivalDate": "2024-04-04"
+    },
+    {
+      "id": 14,
+      "name": {
+        "uk": "Лежак для собак",
+        "en": "Dog Bed"
+      },
+      "price": 690,
+      "originalPrice": 690,
+      "discount": 0,
+      "brand": "Log(Dog)Brand",
+      "category": "sleeping",
+      "animalType": "dog",
+      "ageGroup": "adult",
+      "description": {
+        "uk": "М'який лежак для дорослих собак",
+        "en": "Soft bed for adult dogs"
+      },
+      "stockQuantity": 30,
+      "arrivalDate": "2024-04-05"
+    },
+    {
+      "id": 15,
+      "name": {
+        "uk": "Іграшка для котів",
+        "en": "Cat Toy"
+      },
+      "price": 150,
+      "originalPrice": 150,
+      "discount": 0,
+      "brand": "CatBrand",
+      "category": "toys",
+      "animalType": "cat",
+      "ageGroup": "any",
+      "description": {
+        "uk": "Інтерактивна іграшка для котів",
+        "en": "Interactive cat toy"
+      },
+      "stockQuantity": 120,
+      "arrivalDate": "2024-12-12"
+    }
+  ]
+}
